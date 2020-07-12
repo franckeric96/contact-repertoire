@@ -25,7 +25,7 @@ SECRET_KEY = '%6v=&b9&k(#t-i4g*=-=wgwm683fuek_h6x^g5a41ju#!v@y3g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['contact-repertoire.herokuapp.com']
 
 
 # Application definition
@@ -100,10 +100,21 @@ WSGI_APPLICATION = 'repertoire.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
+#DATABASES = {
+ #   'default': {
+  #      'ENGINE': 'django.db.backends.sqlite3',
+   #     'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    #}
+#}
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'd4fag0rr1n573a',
+        'USER': 'abddklkfkwytmi',
+        'PASSWORD': '9433207b6deff90f6ea6c8b8f082279b2d12b7cb7d348af1e80942e934df2755',
+        'HOST': 'ec2-54-247-94-127.eu-west-1.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 
